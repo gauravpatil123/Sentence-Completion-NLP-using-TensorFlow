@@ -2,11 +2,13 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import DataPreprocessing as DP
+import BuildModel as BM
 
 tokenizer = DP.tokenizer
 max_seq_len = DP.max_sequence_length
 
-model = tf.keras.models.load_model("TrainedModel.h5")
+model = BM.BuildModel.load_model("TrainedModel.h5")
+# model = tf.keras.models.load_model("TrainedModel.h5")
 SEED_TEXT = "To quit"
 NUM_NEXT_WORDS = 5
 

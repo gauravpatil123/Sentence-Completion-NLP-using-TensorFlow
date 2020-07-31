@@ -11,7 +11,9 @@ LABEL = DP.label
 DESIRED_ACC = 0.95
 
 EMBEDDING_DIM = 256
-model = BM.build_model(TOTAL_WORDS, EMBEDDING_DIM, 256, 128, TOTAL_WORDS, TOTAL_WORDS, MAX_SEQ_LEN - 1)
+Model = BM.BuildModel()
+model = Model.build_model(TOTAL_WORDS, EMBEDDING_DIM, 256, 128, TOTAL_WORDS, TOTAL_WORDS, MAX_SEQ_LEN - 1)
+# model = BM.build_model(TOTAL_WORDS, EMBEDDING_DIM, 256, 128, TOTAL_WORDS, TOTAL_WORDS, MAX_SEQ_LEN - 1)
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 print(model.summary())
