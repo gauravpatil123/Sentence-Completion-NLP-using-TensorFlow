@@ -1,3 +1,17 @@
+"""
+TrainModel:
+    1. Imports all preprocessing data and variables
+    2. Sets a desired accuracy for the model
+    3. Builds a learning model 
+    4. compiles the model using custom optimizer and loss function
+    5. prints model summary
+    6. defines a callback class and initializes a callback for each epoch end
+    7. Sets the number of epoch to train the model
+    8. fits/trains the model on preprocessed training dataset (Predictors and Labels)
+    9. saves the trained model as "TrainedModel.h5"
+    10. extracts the comaprisom metrics from the trained model (accuracy and loss)
+    11. plots the extracted comaprison metrics and save sthe images to "Images/"
+"""
 import BuildModel as BM
 import DataPreprocessing as DP
 import PlotCode as PC

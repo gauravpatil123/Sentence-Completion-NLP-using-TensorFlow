@@ -1,3 +1,12 @@
+"""
+DataPreprocessing:
+    1. opens, reads and preprocesses training dataset into corpus
+    2. tokenizes the corpus
+    3. creates input sequences based on n_gram sequence model
+    4. pads the input sequences nased on the max length input sequences
+    5. initializes predictors and labels on the dataset
+"""
+
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
 import tensorflow.keras.utils as ku

@@ -1,3 +1,13 @@
+"""
+Predict:
+    1. Loads the pre initialized tokenizer
+    2. Loads the pre trained model from the saved file
+    3. Initializes a seed text for sentence completion
+    4. Sets the number of words to be predicted after the seed text
+    5. Defines the predict function using the loaded model
+    6. predicts and prints the predicted text on command line
+"""
+
 import tensorflow as tf
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences

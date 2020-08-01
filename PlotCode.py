@@ -1,6 +1,18 @@
+"""
+PlotCode:
+    Defines the plot function to save plot images of the metrics from the trianed model
+"""
 import matplotlib.pyplot as plt
 
+
 def plot(y, x, param, color):
+    """
+    Input:
+        y: values set for the chosen metric
+        x: length of the set y
+        param: chosen comaparison metric for the model
+        color: line color for set y
+    """
     plt.figure(figsize=(50, 30), dpi = 120)
     plt.plot(x, y, color, linewidth = 3)
     plt.xticks(fontsize = 20)
