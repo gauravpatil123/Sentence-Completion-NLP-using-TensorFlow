@@ -12,6 +12,33 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 import tensorflow.keras.utils as ku
 import numpy as np
 
+
+class ProcessData:
+
+    def __init__(self, data_file_dir):
+        self.tokenizer = Tokenizer()
+        self.data = open(data_file_dir).read()
+        self.corpus = data.lower().split("\n")
+        self.tokenizer.fit_on_texts(corpus)
+        self.total_words = len(self.tokenizer.word_index) + 1
+        self.input_sequences = []
+        for line in self.corpus:
+            token_list = self.tokenizer.texts_to_sequences([line])[0]
+            for i in range(1, len(token_list)):
+                n_gram_sequence = token_list[:i+1]
+                self.input_sequences.append(n_gram_sequence)
+
+        self.max_sequence_length = max([len(x) for x in self.input_sequences])
+        self.input_sequences = np.array(pad_sequences(self.input_sequences, maxlen=self.max_sequence_length, padding='pre'))
+
+        self.predictors, self.label = self.input_sequences[:,:-1], self.input_sequences[:,-1]
+        self.label = ku.to_categorical(self.label, num_classes=self.total_words)
+
+    def __call__(self):
+        return self.total_words, self.max_sequence_length, self.predictors, self.label
+
+
+"""
 tokenizer = Tokenizer()
 
 data = open('data/data.txt').read()
@@ -37,3 +64,4 @@ predictors, label = input_sequences[:,:-1], input_sequences[:,-1]
 label = ku.to_categorical(label, num_classes = total_words)
 #print(predictors[:50, :])
 #print(max_sequence_length)
+"""
