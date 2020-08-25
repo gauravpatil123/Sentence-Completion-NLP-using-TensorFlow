@@ -13,9 +13,16 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import DataPreprocessing as DP
 import BuildModel as BM
+import TrainModel as TM
 
+"""
 tokenizer = DP.tokenizer
 max_seq_len = DP.max_sequence_length
+"""
+
+processed_data = TM.PROCESSED_DATA
+tokenizer = processed_data.get_tokenizer()
+max_seq_len = processed_data.get_max_seq_len()
 
 model = BM.BuildModel.load_model("TrainedModel.h5")
 # model = tf.keras.models.load_model("TrainedModel.h5")

@@ -37,6 +37,23 @@ class ProcessData:
     def __call__(self):
         return self.total_words, self.max_sequence_length, self.predictors, self.label
 
+    def get_tokenizer(self):
+        return self.tokenizer
+
+    def get_total_words(self):
+        return self.total_words
+
+    def get_predictors(self):
+        return self.predictors
+
+    def get_label(self):
+        return self.label
+
+    def get_max_seq_len(self):
+        return self.max_sequence_length
+
+    
+
 
 """
 tokenizer = Tokenizer()

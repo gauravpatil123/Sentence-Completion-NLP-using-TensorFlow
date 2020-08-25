@@ -17,11 +17,15 @@ import DataPreprocessing as DP
 import PlotCode as PC
 import tensorflow as tf
 
-
+"""
 TOTAL_WORDS = DP.total_words
 MAX_SEQ_LEN = DP.max_sequence_length
 PREDICTORS = DP.predictors
 LABEL = DP.label
+"""
+PROCESSED_DATA = DP.ProcessData("data/data/txt")
+TOTAL_WORDS, MAX_SEQ_LEN, PREDICTORS, LABEL = PROCESSED_DATA()
+
 DESIRED_ACC = 0.95
 
 EMBEDDING_DIM = 256
