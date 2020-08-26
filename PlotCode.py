@@ -30,6 +30,7 @@ class Plot:
         """
         Plots the graph and saves it to the 'Images/' directory
         """
+        y, x, param, color = self.y, self.x, self.param, self.color
         plt.figure(figsize=(50, 30), dpi = 120)
         plt.plot(x, y, color, linewidth = 3)
         plt.xticks(fontsize = 20)
