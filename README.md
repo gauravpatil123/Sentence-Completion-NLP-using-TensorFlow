@@ -4,12 +4,10 @@ Sentence completion model on trained on Shakespeare's "The comedy of error's" us
 **Dataset**
 - [The comedy of error's](http://shakespeare.mit.edu/comedy_errors/full.html)
 
-**Processing Scripts**
-- DataPreprocessing : Preprocessing raw data, tokenizing, forming input sequences and labels for the dataset
-- PlotCode: Plotting metrics from the trained model
-
 **Classes**
+- DataPreprocessing : Dataset processing class to preprocessing raw data, tokenize, form input sequences and labels for training and prediction
 - BuildModel : model class for the neural network NLP model
+- PlotCode: Class for plotting the metrics from the trained model
 
 **Executables**
 - TrainModel : Trains the model on the training dataset
