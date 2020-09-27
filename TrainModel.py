@@ -18,13 +18,6 @@ import DataPreprocessing as DP
 import PlotCode as PC
 import tensorflow as tf
 
-"""
-TOTAL_WORDS = DP.total_words
-MAX_SEQ_LEN = DP.max_sequence_length
-PREDICTORS = DP.predictors
-LABEL = DP.label
-"""
-
 PROCESSED_DATA = DP.processed_data
 TOTAL_WORDS, MAX_SEQ_LEN, PREDICTORS, LABEL = PROCESSED_DATA()
 
@@ -45,10 +38,8 @@ class myCallback(tf.keras.callbacks.Callback):
 
 callbacks = myCallback()
 
-
 EPOCHS = 100
 history = model.fit(PREDICTORS, LABEL, epochs = EPOCHS, verbose = 1, callbacks = [callbacks])
-
 
 model.save("TrainedModel.h5")
 
@@ -61,6 +52,3 @@ acc_graph()
 
 loss_graph = PC.Plot(loss, epochs, 'loss', 'r')
 loss_graph()
-
-# PC.plot(acc, epochs, 'accuracy', 'b')
-# PC.plot(loss, epochs, 'loss', 'r')
