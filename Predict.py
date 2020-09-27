@@ -13,12 +13,16 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import DataPreprocessing as DP
 import BuildModel as BM
+import logging
 
-tokenizer = DP.tokenizer
-max_seq_len = DP.max_sequence_length
+logging.basicConfig(format="%(message)s", level=logging.INFO)
+PROCESSED_DATA = DP.processed_data
+tokenizer = PROCESSED_DATA.get_tokenizer()
+max_seq_len = PROCESSED_DATA.get_max_seq_len()
 
-model = BM.BuildModel.load_model("TrainedModel.h5")
-# model = tf.keras.models.load_model("TrainedModel.h5")
+Model = BM.BuildModel()
+model = Model.load_model("TrainedModel.h5")
+
 SEED_TEXT = "To quit"
 NUM_NEXT_WORDS = 5
 
@@ -36,5 +40,5 @@ def predict(seed_text, num_next_words):
     return seed_text
 
 PREDICT = predict(SEED_TEXT, NUM_NEXT_WORDS)
-print(PREDICT)
+logging.info(PREDICT)
 
