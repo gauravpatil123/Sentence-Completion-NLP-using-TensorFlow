@@ -1,6 +1,10 @@
 # Sentence-Completion-NLP-using-TensorFlow
 Sentence completion model on trained on Shakespeare's "The comedy of error's" using NLP in TensorFlow and Keras
 
+**Contents**
+
+**About**
+
 **Dataset**
 - [The comedy of error's](http://shakespeare.mit.edu/comedy_errors/full.html)
 
@@ -23,3 +27,9 @@ Sentence completion model on trained on Shakespeare's "The comedy of error's" us
 - Accuracy and loss of the model on training dataset
 - <img src="Images/accuracy.png" width=1000>
 - <img src="Images/loss.png" width=1000>
+- Results on Predict
+    - Seed text = "To quit"
+    - Number of next words to predict = 10
+    - Sentence predicted = "To quit the penalty and to ransom him not no feast in"
+
+**Conclusion**
