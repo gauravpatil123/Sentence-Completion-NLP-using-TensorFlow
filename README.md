@@ -9,7 +9,7 @@ Sentence completion model on trained on Shakespeare's "The comedy of error's" us
 - Results
 - Conclusions
 
-**About**
+**About**</br>
 I have undertaken this project to demonstrate my interpretation of a simple recurrent neural network model for sentence prediction using Bi-directional LSTM cells.
 I have used TensorFLow 2.0 as a Machine Learning framework for this project to build the model and trained the model on a dataset from MIT. The build is object oriented and the executables are writtten as scripts.
 
