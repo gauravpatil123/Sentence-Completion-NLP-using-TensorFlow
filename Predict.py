@@ -24,7 +24,7 @@ Model = BM.BuildModel()
 model = Model.load_model("TrainedModel.h5")
 
 SEED_TEXT = "To quit"
-NUM_NEXT_WORDS = 5
+NUM_NEXT_WORDS = 10
 
 def predict(seed_text, num_next_words):
     for _ in range(num_next_words):
@@ -41,4 +41,3 @@ def predict(seed_text, num_next_words):
 
 PREDICT = predict(SEED_TEXT, NUM_NEXT_WORDS)
 logging.info(PREDICT)
-
