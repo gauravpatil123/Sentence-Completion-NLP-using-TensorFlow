@@ -10,11 +10,11 @@ Sentence completion model on trained on Shakespeare's "The comedy of error's" us
 - Results
 
 **About**</br>
-I have undertaken this project to demonstrate my interpretation of a simple recurrent neural network model for sentence prediction using Bi-directional LSTM cells.
+I did this project to demonstrate my interpretation of a simple recurrent neural network model for sentence prediction using Bi-directional LSTM cells.
 I have used TensorFLow 2.0 as a Machine Learning framework for this project to build the model and trained the model on a dataset from MIT. The build is object oriented and the executables are written as scripts.
 
 **Conclusions**
-1. The sentence prediction model does good on avoiding repetitions of words even in longer sentences as the model is a RNN using Bi-directional LSTM cells.
+1. The sentence prediction model performs well on avoiding repetitions of words even in longer sentences as the model is a RNN using Bi-directional LSTM cells.
 2. The model fails to maintain the sentiment and meaning for longer sentences ~> 10 words.
 3. Further look into maitaining the meaning for longer sentence is required to improve the model and make it more sophisticated.
 
